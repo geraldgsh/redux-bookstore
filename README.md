@@ -195,7 +195,7 @@ Install ESlint with following command
 Checkout our [wikipage](https://github.com/geraldgsh/react-calculator/wiki) for more details. 
 
 #### Live Demo
-[Demo]()
+[Demo](https://redux-bkstore.herokuapp.com/)
 
 #### Getting Started
 Clone repo and open index.html with your favorite browser.
