@@ -1,14 +1,34 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
-import { Provider, connect } from 'react-redux';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-// import rootReducer from './reducers/';
+import rootReducer from './reducers/books';
 import App from './App';
 
-const store = createStore(rootReducer);
+const initialState = {
+  books: [
+    {
+      id: Math.floor(Math.random() * 100),
+      title: 'Angels and Demons',
+      category: 'Action',
+    },
+    {
+      id: Math.floor(Math.random() * 100),
+      title: 'Angel',
+      category: 'Horror',
+    },
+    {
+      id: Math.floor(Math.random() * 100),
+      title: 'Buffy The Vampire Slayer',
+      category: 'Sci-Fi',
+    },
+  ],
+};
+
+const store = createStore(rootReducer, initialState);
 
 ReactDOM.render(
   <Provider store={store}>
