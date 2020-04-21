@@ -39,10 +39,10 @@ class BooksForm extends React.Component {
 
   handleSubmit(e) {
     const { title } = this.state;
-    console.log(this.props);
+    const { createBook } = this.props;
     e.preventDefault();
     if (title) {
-      this.props.createBook(this.state);
+      createBook(this.state);
       this.reset();
     }
   }
@@ -78,12 +78,9 @@ class BooksForm extends React.Component {
   }
 }
 
-
 BooksForm.propTypes = {
   createBook: PropTypes.func.isRequired,
 };
-
-const mapStateToProps = state => ({ books: state.books });
 
 const mapDispatchToProps = dispatch => ({
   createBook: book => {
@@ -91,4 +88,4 @@ const mapDispatchToProps = dispatch => ({
   },
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(BooksForm);
+export default connect(null, mapDispatchToProps)(BooksForm);

@@ -13,8 +13,6 @@ const BookList = ({ books }) => (
       </tr>
     </thead>
     <tbody>
-      {console.log('BookList Component')}
-      {console.log(books)}
       {books.map(book => (
         <Book book={book} key={book.id} />
       ))}
