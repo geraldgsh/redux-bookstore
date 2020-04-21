@@ -15,10 +15,7 @@ const BookList = ({ books, removeBook }) => (
     </thead>
     <tbody>
       {books.map(book => (
-        <div key={book.id}>
-          <Book book={book} key={book.id} />
-          <button type="submit" onClick={() => removeBook(book)}>Remove Book</button>
-        </div>
+        <Book book={book} key={book.id} removeBook={removeBook} />
       ))}
     </tbody>
   </table>
