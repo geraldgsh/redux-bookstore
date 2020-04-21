@@ -11,17 +11,17 @@ import App from './App';
 const initialState = {
   books: [
     {
-      id: Math.floor(Math.random() * 100),
+      id: Math.floor(Math.random() * 1000),
       title: 'Angels and Demons',
       category: 'Action',
     },
     {
-      id: Math.floor(Math.random() * 100),
+      id: Math.floor(Math.random() * 1000),
       title: 'Angel',
       category: 'Horror',
     },
     {
-      id: Math.floor(Math.random() * 100),
+      id: Math.floor(Math.random() * 1000),
       title: 'Buffy The Vampire Slayer',
       category: 'Sci-Fi',
     },

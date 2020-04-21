@@ -1,22 +1,24 @@
-import React from "react";
-import { createBook } from "../actions/index";
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { createBook } from '../actions/index';
 
 const categories = [
-  "Action",
-  "Biography",
-  "History",
-  "Horror",
-  "Kids",
-  "Learning",
-  "Sci-Fi",
+  'Action',
+  'Biography',
+  'History',
+  'Horror',
+  'Kids',
+  'Learning',
+  'Sci-Fi',
 ];
 
 class BooksForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: Math.floor(Math.random() * 100),
-      title: "",
+      id: Math.floor(Math.random() * 1000),
+      title: '',
       category: categories[0],
     };
     this.handleChange = this.handleChange.bind(this);
@@ -24,11 +26,11 @@ class BooksForm extends React.Component {
   }
 
   handleChange(e) {
-    if (e.target.name === "title") {
+    if (e.target.name === 'title') {
       this.setState({
         title: e.target.value,
       });
-    } else if (e.target.name === "category") {
+    } else if (e.target.name === 'category') {
       this.setState({
         category: e.target.value,
       });
@@ -37,16 +39,18 @@ class BooksForm extends React.Component {
 
   handleSubmit(e) {
     const { title } = this.state;
+    console.log(this.props);
     e.preventDefault();
     if (title) {
-      createBook(this.state);
+      this.props.createBook(this.state);
       this.reset();
     }
   }
+
   reset() {
     this.setState({
-      id: Math.ceil(Math.random() * 100),
-      title: "",
+      id: Math.ceil(Math.random() * 1000),
+      title: '',
       category: categories[0],
     });
   }
@@ -64,7 +68,7 @@ class BooksForm extends React.Component {
         />
         <h2>Category</h2>
         <select name="category" value={category} onChange={this.handleChange}>
-          {categories.map((category) => (
+          {categories.map(category => (
             <option key={category}>{category}</option>
           ))}
         </select>
@@ -74,4 +78,17 @@ class BooksForm extends React.Component {
   }
 }
 
-export default BooksForm;
+
+BooksForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = state => ({ books: state.books });
+
+const mapDispatchToProps = dispatch => ({
+  createBook: book => {
+    dispatch(createBook(book));
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BooksForm);
