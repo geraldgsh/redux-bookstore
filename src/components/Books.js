@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Books = ({ book, removeBook }) => (
+const Books = ({ book }) => (
   <tr key={book.id}>
     <td>{book.id}</td>
     <td>{book.title}</td>

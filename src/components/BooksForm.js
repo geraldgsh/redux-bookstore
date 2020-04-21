@@ -68,7 +68,7 @@ class BooksForm extends React.Component {
         />
         <h2>Category</h2>
         <select name="category" value={category} onChange={this.handleChange}>
-          {categories.map((category) => (
+          {categories.map(category => (
             <option key={category}>{category}</option>
           ))}
         </select>
@@ -82,8 +82,8 @@ BooksForm.propTypes = {
   createBook: PropTypes.func.isRequired,
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  createBook: (book) => {
+const mapDispatchToProps = dispatch => ({
+  createBook: book => {
     dispatch(createBook(book));
   },
 });
