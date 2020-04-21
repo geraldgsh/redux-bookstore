@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import Book from "Books.js";
 
-const BookList = () => {
+const BookList = ({ books }) => {
   return (
     <table>
       <thead>
@@ -18,7 +18,7 @@ const BookList = () => {
       </thead>
       <tbody>
         {Object.values(books).map((book) => (
-          <Book id={book.id} title={book.title} category={book.category} />
+          <Book key={book.id} title={book.title} category={book.category} />
         ))}
       </tbody>
     </table>
