@@ -3,31 +3,16 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Books';
 import { removeBook, changeFilter } from '../actions/index';
-
-const categories = [
-  'All',
-  'Action',
-  'Biography',
-  'History',
-  'Horror',
-  'Kids',
-  'Learning',
-  'Sci-Fi',
-];
+import CategoryFilter from '../components/CategoryFilter'
 
 const BookList = ({
   books, filter, removeBook, changeFilter,
-}) => {
-  const selectCat = React.useRef(null);
+}) => {  
   const filteredBooks = (filter !== 'All') ? books.filter(book => book.category === filter) : books;
   return (
     <div>
       <div>
-        <select ref={selectCat} name="category" onChange={() => changeFilter(selectCat.current.value)}>
-          {categories.map(category => (
-            <option key={category}>{category}</option>
-          ))}
-        </select>
+        <CategoryFilter changeFilter={changeFilter} />
       </div>
       <table>
         <thead>
