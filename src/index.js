@@ -5,7 +5,7 @@ import { createStore } from 'redux';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-import rootReducer from './reducers/books';
+import rootReducer from './reducers/index';
 import App from './App';
 
 const initialState = {
