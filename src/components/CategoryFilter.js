@@ -12,7 +12,7 @@ const categories = [
   'Sci-Fi',
 ];
 
-const CategoryFilter = ({ 
+const CategoryFilter = ({
   changeFilter,
 }) => {
   const selectCat = React.useRef(null);

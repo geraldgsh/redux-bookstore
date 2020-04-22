@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Books';
 import { removeBook, changeFilter } from '../actions/index';
-import CategoryFilter from '../components/CategoryFilter'
+import CategoryFilter from '../components/CategoryFilter';
 
 const BookList = ({
   books, filter, removeBook, changeFilter,
-}) => {  
+}) => {
   const filteredBooks = (filter !== 'All') ? books.filter(book => book.category === filter) : books;
   return (
     <div>
@@ -30,6 +30,10 @@ const BookList = ({
       </table>
     </div>
   );
+};
+
+BookList.defaultProps = {
+  filter: 'All',
 };
 
 BookList.propTypes = {
