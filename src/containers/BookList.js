@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import Book from '../components/Books';
 import { removeBook, changeFilter } from '../actions/index';
 import CategoryFilter from '../components/CategoryFilter';
-import './BookList.css';
+import '../assets/css/BookList.css';
+import logo from '../assets/images/logo.svg';
 
 const BookList = ({
   books, filter, removeBook, changeFilter,
@@ -21,6 +22,7 @@ const BookList = ({
             Categories
             <CategoryFilter changeFilter={changeFilter} />
           </div>
+          <img className="react-logo" src={logo} alt="logo" />
         </div>
       </header>
       <main className="bg-grey">

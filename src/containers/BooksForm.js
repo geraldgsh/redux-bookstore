@@ -2,17 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
-import './BookForm.css';
+import '../assets/css/BookForm.css';
+import { categories } from '../constants/categories';
 
-const categories = [
-  'Action',
-  'Biography',
-  'History',
-  'Horror',
-  'Kids',
-  'Learning',
-  'Sci-Fi',
-];
 
 class BooksForm extends React.Component {
   constructor(props) {

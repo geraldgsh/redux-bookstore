@@ -1,5 +1,12 @@
+.logo-div {
+  text-align: end;
+  border: solid black;
+  width: 50%;
+}
+
 .react-logo {
-  height: 40vmin;
+  height: 12vmin;
+  margin-left: auto !important; 
   pointer-events: none;
 }
 
