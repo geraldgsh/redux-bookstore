@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header * {
+  padding: 5px  0px 5px 0px;
+  margin: 5px 5px 5px 5px;
+}
+
+.header h2 {
+  color: #0692FF
+}
+
+.book {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: thin solid gray;
+}
+
+.book .left h5 {
+  color: grey;
+  font-family: Arial;
+  font-weight: 900;
+}
+
+.title {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.author {
+  color: #3a82b9;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.percentage {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.completed {
+  font-family: Arial, Helvetica, sans-serif;
+  color: gray,
+}
+
+.current { 
+  font-family: 'Times New Roman', Times, serif;
+  color: gray;
+}
+
+.chapter {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.progress {
+
+}
