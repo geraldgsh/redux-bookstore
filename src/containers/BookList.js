@@ -12,18 +12,23 @@ const BookList = ({
   const filteredBooks = (filter !== 'All') ? books.filter(book => book.category === filter) : books;
   return (
     <div>
-      <header className='header'>
-        <h2>
-          Bookstore CMS
-        </h2>
-        <div>
-          <CategoryFilter changeFilter={changeFilter} />
+      <header className="m-b bg-white round-top">
+        <div className="center max-width-90 flex-row">
+          <h1 className="app-title">
+            Bookstore CMS
+          </h1>
+          <div className="text-center">
+            Categories
+            <CategoryFilter changeFilter={changeFilter} />
+          </div>
         </div>
-      </header>      
-      <main>
-        {filteredBooks.map(book => (
-          <Book book={book} key={book.id} removeBook={removeBook} />
-        ))}
+      </header>
+      <main className="bg-grey">
+        <div className="center max-width-90 bookSection">
+          {filteredBooks.map(book => (
+            <Book book={book} key={book.id} removeBook={removeBook} />
+          ))}
+        </div>
       </main>
     </div>
   );

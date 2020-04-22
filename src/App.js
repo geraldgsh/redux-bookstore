@@ -5,8 +5,12 @@ import './App.css';
 
 const App = () => (
   <div className="App">
-    <BookList />
-    <BooksForm />
+    <div className="backBG bg-dark-grey">
+      <div className="container center">
+        <BookList />
+        <BooksForm />
+      </div>
+    </div>
   </div>
 );
 
