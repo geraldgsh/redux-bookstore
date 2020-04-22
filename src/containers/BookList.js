@@ -2,37 +2,69 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Books';
-import { removeBook } from '../actions/index';
+import { removeBook, changeFilter } from '../actions/index';
 
-const BookList = ({ books, removeBook }) => (
-  <table>
-    <thead>
-      <tr>
-        <th>Book ID</th>
-        <th>Title</th>
-        <th>Category</th>
-      </tr>
-    </thead>
-    <tbody>
-      {books.map(book => (
-        <Book book={book} key={book.id} removeBook={removeBook} />
-      ))}
-    </tbody>
-  </table>
-);
+const categories = [
+  'All',
+  'Action',
+  'Biography',
+  'History',
+  'Horror',
+  'Kids',
+  'Learning',
+  'Sci-Fi',
+];
+
+const BookList = ({
+  books, filter, removeBook, changeFilter,
+}) => {
+  const selectCat = React.useRef(null);
+  const filteredBooks = (filter !== 'All') ? books.filter(book => book.category === filter) : books;
+  return (
+    <div>
+      <div>
+        <select ref={selectCat} name="category" onChange={() => changeFilter(selectCat.current.value)}>
+          {categories.map(category => (
+            <option key={category}>{category}</option>
+          ))}
+        </select>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Book ID</th>
+            <th>Title</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          {filteredBooks.map(book => (
+            <Book book={book} key={book.id} removeBook={removeBook} />
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
 
 BookList.propTypes = {
   books: PropTypes.instanceOf(Array).isRequired,
+  filter: PropTypes.string,
   removeBook: PropTypes.func.isRequired,
+  changeFilter: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
   books: state.books,
+  filter: state.filter,
 });
 
 const mapDispatchToProps = dispatch => ({
   removeBook: book => {
     dispatch(removeBook(book));
+  },
+  changeFilter: category => {
+    dispatch(changeFilter(category));
   },
 });
 
