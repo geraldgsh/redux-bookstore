@@ -21,7 +21,7 @@ const BookList = ({
           <div className="cat-title">
             <span className="text-grey">Books</span>
           </div>
-          <div className="categories text-center">            
+          <div className="categories text-center">
             <CategoryFilter changeFilter={changeFilter} />
           </div>
           <img className="react-logo" src={logo} alt="logo" />
