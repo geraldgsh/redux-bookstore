@@ -101,12 +101,12 @@ Use `npm install <pkg>` afterwards to install a package and
 save it as a dependency in the package.json file.
 
 Press ^C at any time to quit.
-package name: (weather-app)
+package name: (redux-bookstore)
 version: (1.0.0)
-description: Weather Application
+description: Bookstore Application
 entry point: (webpack.config.js) src/index.js
 test command:
-git repository: (https://github.com/geraldgsh/weather-app.git)
+git repository: (https://github.com/geraldgsh/redux-bookstore.git)
 keywords:
 author: Gerald Goh
 license: (ISC)
@@ -122,14 +122,14 @@ About to write to /package.json:
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/geraldgsh/react-calculator.git"
+    "url": "git+https://github.com/geraldgsh/redux-bookstore.git"
   },
   "author": "Gerald Goh",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/geraldgsh/react-calculator/issues"
+    "url": "https://github.com/geraldgsh/redux-bookstore/issues"
   },
-  "homepage": "https://github.com/geraldgsh/react-calculator#readme"
+  "homepage": "https://github.com/geraldgsh/redux-bookstorer#readme"
 }
 ```
 
