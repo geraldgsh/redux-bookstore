@@ -4,7 +4,7 @@ React
 
 ### Snapshot
 
-![]()
+![](https://github.com/geraldgsh/redux-bookstore/blob/milestone-5/src/assets/images/screenshot.JPG)
 
 ### Introduction.
 
@@ -213,7 +213,7 @@ https://github.com/geraldgsh/redux-bookstore
 
 Github: [geraldgsh](https://github.com/geraldgsh)
 
-Twitter: [geraldgsh](https://github.com/geraldgsh)
+Twitter: [geraldgsh](https://twitter.com/geraldgsh)
 
 Linkedin: [Gerald Goh](https://www.linkedin.com/geraldgsh)
 
