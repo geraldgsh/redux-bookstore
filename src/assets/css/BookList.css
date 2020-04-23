@@ -1,0 +1,116 @@
+.app-title {
+  color: #0692FF;
+  font-size: 4vmin;
+}
+
+.bookSection {
+  padding: 2em;
+}
+.book {
+  align-items: center;
+  border: 1px solid #DFDFDF; 
+  background-color: #FFF;  
+  border-radius: 0.3em;
+  display: flex;
+  margin-bottom: 1em;
+  padding: 24px;  
+}
+#left {
+  flex-basis: 50%;
+}
+#center {
+  align-items: center;
+  border-right: 1px solid #DDD;
+  display: inline-flex;
+  flex-basis: 20%;  
+  justify-content: center;  
+  padding-right: 20px;  
+}
+#right {  
+  flex-basis: 30%;
+  justify-self: center;
+  padding-left: 2.5%;
+  text-align: left;
+}
+#right button {
+  background-color: #0290ff;
+  border: none;
+  border-radius: 0.35em;
+  color: #FFF;
+  cursor: not-allowed;
+  padding: 8px 22px;  
+}
+
+.category {
+  color: grey;
+  font-family: Arial;
+  font-weight: 800;
+  margin-bottom: -2px;
+}
+
+.title {
+  margin-bottom: -4px;
+}
+
+.author {
+  color: #3a82b9;
+  font-weight: 400;
+  margin-bottom: 12px;  
+}
+.actions { text-align: left; }
+.actions button {  
+  background-color: transparent;
+  border: none;
+  color: #3a82b9;
+}
+.actions button:nth-child(1) {
+  padding-left: 0;
+}
+.actions button:nth-child(2) {
+  border-left: 1px solid #DDD;
+  border-right: 1px solid #DDD;
+  margin: 0 8px;
+  padding: 0 8px
+}
+.percent { padding-left: 12px; }
+.percentage {
+  font-weight: 300;
+}
+.completed {
+  color: gray;
+  font-weight: 300;
+}
+
+.current { 
+  color: gray;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.chapter {
+  margin-bottom: 1em;
+}
+
+
+.pie-graph {
+  width: 60px;
+  height: 60px;
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-right: 10px solid #2274ee;
+  border-bottom: 10px solid #2274ee;
+}
+
+/* Small screens less than 720px */
+@media screen and (max-width: 720px) {
+  .actions button:nth-child(2) { padding: 6px; margin: 0; }
+  .bookSection { padding: 6px; }
+  .book { flex-wrap: wrap; }
+  .app-title { flex-basis: 80%; font-size: 8vmin; text-align: right; }
+  #left { flex-basis: 100%; text-align: center; }
+  .actions { text-align: center; }
+  #center { flex-basis: 100%; padding: 12px 0; border-right: none; margin-top: 0.8em; margin-bottom: 0.8em; }
+  .categories { text-align: center; flex-basis: 100%; order: 3; }
+  .cat-title { display: none; }
+  #right { flex-basis: 100%; text-align: center; padding-left: 0;  }
+}

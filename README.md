@@ -4,10 +4,12 @@ React
 
 ### Snapshot
 
-![]()
+![](https://github.com/geraldgsh/redux-bookstore/blob/milestone-5/src/assets/images/screenshot.JPG)
 
 ### Introduction.
+In this project you will use React and Redux to build a very simple application. You will work in a real-world project for a fictional company that requires your help. The project has been split into multiple milestones, and each milestone has functional and technical requirements that you will need to implement.
 
+The original version of this content can be found and edited [here](https://github.com/microverseinc/project-redux-bookstore)
 
 ### Tools
 
@@ -24,9 +26,20 @@ React
 
 ### Project Objectives
 
+Magic-books Inc. is a fictional company based in Germany. They have requested your help to build the front-end of an application that will help them organize and manage their bookstore. They want it to be fast, dynamic and responsive to their actions and therefore you decided to build it with React & Redux.
 
 ### Microverse Requirements
 
+Remember about descriptive README file.
+Inline comments: It’s better to delete commented code. If you need to review a previous version of your code, use git history.
+We identified 5 milestones for this project. Remember to create a separate feature branch for each milestone (see more in Code review >> Between milestones section below)
+
+Milestone 1: Basic project structure
+Milestone 2: Components and Redux store
+Milestone 3: Interactive form
+Milestone 4: Category filter
+Milestone 5: UI
+Milestone 6 (optional): Backend
 
 ### Linter Setup
 
@@ -179,9 +192,10 @@ Install ESlint with following command
 
 4. Stickler does not work and nothing helps 💥 - run eslint in your local env and correct all errors. **Remember to let your Code Reviewer know that you had problems with Stickler and you used linter in local env.**
 
-### Future enhancement
+### Future Features
 
-
+1. Add author input and filter
+2. Add ISBN input and filter
 
 ### To begin
 
@@ -192,7 +206,7 @@ Install ESlint with following command
 
 ### Wiki
 
-Checkout our [wikipage](https://github.com/geraldgsh/react-calculator/wiki) for more details. 
+Checkout our [wikipage](https://github.com/geraldgsh/rexud-bookstore/wiki) for more details. 
 
 #### Live Demo
 [Demo](https://redux-bkstore.herokuapp.com/)
@@ -205,15 +219,16 @@ Web browser like Chrome, Mozilla or similar.
 
 ### Original Project Source
 
+[Link](https://github.com/microverseinc/project-redux-bookstore)
+
 ### Github Repo
 https://github.com/geraldgsh/redux-bookstore
-
 
 👤 **Author**
 
 Github: [geraldgsh](https://github.com/geraldgsh)
 
-Twitter: [geraldgsh](https://github.com/geraldgsh)
+Twitter: [geraldgsh](https://twitter.com/geraldgsh)
 
 Linkedin: [Gerald Goh](https://www.linkedin.com/geraldgsh)
 

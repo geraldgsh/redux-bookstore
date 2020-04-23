@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Book from '../components/Books';
 import { removeBook, changeFilter } from '../actions/index';
 import CategoryFilter from '../components/CategoryFilter';
+import '../assets/css/BookList.css';
+import logo from '../assets/images/logo.svg';
 
 const BookList = ({
   books, filter, removeBook, changeFilter,
@@ -11,23 +13,27 @@ const BookList = ({
   const filteredBooks = (filter !== 'All') ? books.filter(book => book.category === filter) : books;
   return (
     <div>
-      <div>
-        <CategoryFilter changeFilter={changeFilter} />
-      </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
+      <header className="m-b bg-white round-top">
+        <div className="center max-width-90 flex-row">
+          <h1 className="app-title">
+            Bookstore CMS
+          </h1>
+          <div className="cat-title">
+            <span className="text-grey">Books</span>
+          </div>
+          <div className="categories text-center">
+            <CategoryFilter changeFilter={changeFilter} />
+          </div>
+          <img className="react-logo" src={logo} alt="logo" />
+        </div>
+      </header>
+      <main className="bg-grey">
+        <div className="center max-width-90 bookSection">
           {filteredBooks.map(book => (
             <Book book={book} key={book.id} removeBook={removeBook} />
           ))}
-        </tbody>
-      </table>
+        </div>
+      </main>
     </div>
   );
 };
