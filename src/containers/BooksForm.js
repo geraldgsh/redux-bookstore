@@ -52,7 +52,7 @@ class BooksForm extends React.Component {
     const { title, category } = this.state;
     return (
       <div className="bg-grey round-bottom box-shadow">
-        <div className="center max-width-90">
+        <div className="center max-width-90 border-top">
           <div className="formTitle">Add New Book</div>
           <form onSubmit={this.handleSubmit} className="bookForm">
             <input

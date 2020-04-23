@@ -37,6 +37,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f3f4f8;
 }
 
+.border-top {  border-top: 1px solid #DFDFDF; padding-top: 1.5em;}
 .round-top {
   border-radius: 0.3em 0.3em 0 0;
 }
