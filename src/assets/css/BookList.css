@@ -10,7 +10,8 @@
   display: flex;
   align-items: center;
   background-color: #FFF;
-  border: 1px solid #DDD;
+  border: 1px solid #DFDFDF;
+  border-radius: 0.3em;
   padding: 24px;
   margin-bottom: 1em;
 }
@@ -43,8 +44,8 @@
 .category {
   color: grey;
   font-family: Arial;
-  font-weight: 900;
-  margin-bottom: 2px;
+  font-weight: 800;
+  margin-bottom: -2px;
 }
 
 .title {
@@ -94,7 +95,6 @@
 .pie-graph {
   width: 60px;
   height: 60px;
-  margin: auto;
   border: 10px solid #f3f3f3;
   border-radius: 50%;
   border-right: 10px solid #2274ee;
@@ -106,7 +106,10 @@
   .actions button:nth-child(2) { padding: 6px; margin: 0; }
   .bookSection { padding: 6px; }
   .book { flex-wrap: wrap; }
+  .app-title { flex-basis: 80%; font-size: 8vmin; text-align: right; }
   #left { flex-basis: 100%; text-align: center; }
-  #center { flex-basis: 100%; padding: 12px 0; border-right: none; }
-  #right { flex-basis: 100%; text-align: center; }
+  .actions { text-align: center; }
+  #center { flex-basis: 100%; padding: 12px 0; border-right: none; margin-top: 0.8em; margin-bottom: 0.8em; }
+  .categories { text-align: center; flex-basis: 100%; order: 3; }
+  #right { flex-basis: 100%; text-align: center; padding-left: 0;  }
 }

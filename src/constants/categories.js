@@ -9,5 +9,5 @@ export const categories = [
 ];
 
 export const allCategories = [
-  'ALL', ...categories,
+  'All', ...categories,
 ];

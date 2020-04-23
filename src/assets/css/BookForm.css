@@ -41,3 +41,9 @@
   border: none;
   border-radius: 0.35em;
 }
+
+/* Small screens less than 720px */
+@media screen and (max-width: 720px) {
+  .formTitle { text-align: center; }
+  .bookForm { flex-wrap: wrap; justify-content: center; }
+}

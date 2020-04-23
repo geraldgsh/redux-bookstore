@@ -1,11 +1,6 @@
-.logo-div {
-  text-align: end;
-  border: solid black;
-  width: 50%;
-}
 
 .react-logo {
-  height: 12vmin;
+  height: 10vmin;
   margin-left: auto !important; 
   pointer-events: none;
 }
@@ -31,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 .all-caps {
   text-transform: uppercase;
 }
-
+.text-grey { color: #888; }
 .bg-white {
   background-color: #FFF;
 }
@@ -87,6 +82,8 @@ button:disabled {
 
 /* Small screens less than 720px */
 @media screen and (max-width: 720px) {
+  .flex-row * { margin: 5px 0; }
+  .react-logo { order: 2; }
   .max-width-90 { width: 99%; margin: auto;}
   .backBG { padding: 0;}
   .container { max-width: none; }
