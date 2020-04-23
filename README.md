@@ -219,6 +219,8 @@ Web browser like Chrome, Mozilla or similar.
 
 ### Original Project Source
 
+[Link](https://github.com/microverseinc/project-redux-bookstore)
+
 ### Github Repo
 https://github.com/geraldgsh/redux-bookstore
 
