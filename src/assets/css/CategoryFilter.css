@@ -1,12 +1,12 @@
 select {
-  cursor: pointer;
-  flex-basis: 20%;
-  padding: 12px;
-  color: #555;
-  font-weight: bold;
-  font-size: 16px;
   background-color: #FFF;
   border: 1px solid #DDD;
   border-radius: 0.35em;
+  color: #555;
+  cursor: pointer;
+  flex-basis: 20%;
+  font-weight: bold;
+  font-size: 16px;
   margin-right: 2em;
+  padding: 12px;
 }

@@ -18,8 +18,10 @@ const BookList = ({
           <h1 className="app-title">
             Bookstore CMS
           </h1>
-          <div className="categories text-center">
-            <span className="text-grey">Categories</span>
+          <div className="cat-title">
+            <span className="text-grey">Books</span>
+          </div>
+          <div className="categories text-center">            
             <CategoryFilter changeFilter={changeFilter} />
           </div>
           <img className="react-logo" src={logo} alt="logo" />

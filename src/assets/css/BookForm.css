@@ -1,10 +1,10 @@
 
-.formTitle {
-  text-transform: uppercase;
-  font-size: 1.4em;
+.formTitle {  
   color: #AAA;
+  font-size: 1.4em;
   font-weight: bold;
   margin-bottom: 12px;
+  text-transform: uppercase;
 }
 
 .bookForm {
@@ -12,39 +12,42 @@
   padding-bottom: 6em;
 }
 .bookForm input {
-  flex-basis: 60%;
-  padding: 12px;
-  color: #555;
-  font-weight: bold;
-  font-size: 18px;
   border: 1px solid #DDD;
   border-radius: 0.35em;
+  color: #555;
+  flex-basis: 60%;
+  font-size: 18px;
+  font-weight: bold;
   margin-right: 2em;
+  padding: 12px;  
 }
 .bookForm select {
-  flex-basis: 20%;
-  padding: 12px;
-  color: #555;
-  font-weight: bold;
-  font-size: 16px;
   background-color: #FFF;
   border: 1px solid #DDD;
   border-radius: 0.35em;
+  color: #555;
+  flex-basis: 20%;  
+  font-weight: bold;
+  font-size: 16px; 
   margin-right: 2em;
+  padding: 12px;
 }
 .bookForm button {
-  flex-basis: 20%;
-  font-weight: bold;
-  font-size: 16px;
-  color: #FFF;
   background-color: #0290ff;
-  padding: 8px 22px;
   border: none;
   border-radius: 0.35em;
+  color: #FFF;
+  flex-basis: 20%;
+  font-weight: bold;
+  font-size: 16px;  
+  padding: 8px 22px;  
 }
 
 /* Small screens less than 720px */
 @media screen and (max-width: 720px) {
   .formTitle { text-align: center; }
   .bookForm { flex-wrap: wrap; justify-content: center; }
+  .bookForm button { flex-basis: 65%; margin-top: 1em; }
+  .bookForm input { margin-right: 0; }
+  .bookForm select { flex-basis: 65%; margin-top: 1em; margin-right: 0; }
 }
