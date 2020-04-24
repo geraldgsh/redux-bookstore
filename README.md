@@ -16,9 +16,9 @@ In this project you will use React and Redux to build a very simple application.
 - HTML, CSS
 - [ES6 JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Node Package Manager(NPM)](https://www.npmjs.com/)
-* [React-Create-App](https://github.com/mars/create-react-app-buildpack)
-* [Redux](https://redux.js.org/)
-* [Prop-types](https://www.npmjs.com/package/prop-types)
+- [React-Create-App](https://github.com/mars/create-react-app-buildpack)
+- [Redux](https://redux.js.org/)
+- [Prop-types](https://www.npmjs.com/package/prop-types)
 
 ### Project Objectives
 
