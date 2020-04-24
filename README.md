@@ -39,8 +39,7 @@ Magic-books Inc. is a fictional company based in Germany. They have requested yo
 
 Checkout our [wikipage](https://github.com/geraldgsh/rexud-bookstore/wiki) for more details. 
 
-#### Live Demo
-[Demo](https://redux-bkstore.herokuapp.com/)
+## [Live DEMO](https://redux-bkstore.herokuapp.com/)
 
 #### Getting Started
 Clone repo and open index.html with your favorite browser.
@@ -48,9 +47,7 @@ Clone repo and open index.html with your favorite browser.
 #### Prerequisites
 Web browser like Chrome, Mozilla or similar.
 
-### Original Project Specifications
-
-[Link](https://github.com/microverseinc/project-redux-bookstore)
+### [Original Project Specifications](https://github.com/microverseinc/project-redux-bookstore)
 
 ## Authors
 
