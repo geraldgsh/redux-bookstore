@@ -48,12 +48,9 @@ Clone repo and open index.html with your favorite browser.
 #### Prerequisites
 Web browser like Chrome, Mozilla or similar.
 
-### Original Project Source
+### Original Project Specifications
 
 [Link](https://github.com/microverseinc/project-redux-bookstore)
-
-### Github Repo
-https://github.com/geraldgsh/redux-bookstore
 
 ## Authors
 
