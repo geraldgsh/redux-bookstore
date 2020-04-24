@@ -9,7 +9,7 @@ React
 ### Introduction.
 In this project you will use React and Redux to build a very simple application. You will work in a real-world project for a fictional company that requires your help. The project has been split into multiple milestones, and each milestone has functional and technical requirements that you will need to implement.
 
-The original version of this content can be found and edited [here](https://github.com/microverseinc/project-redux-bookstore)
+#### [Original Project Specifications Here](https://github.com/microverseinc/project-redux-bookstore)
 
 ## Built With
 
@@ -46,8 +46,6 @@ Clone repo and open index.html with your favorite browser.
 
 #### Prerequisites
 Web browser like Chrome, Mozilla or similar.
-
-### [Original Project Specifications](https://github.com/microverseinc/project-redux-bookstore)
 
 ## Authors
 
