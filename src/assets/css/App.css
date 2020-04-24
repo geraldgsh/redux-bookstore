@@ -6,6 +6,8 @@
   margin-left: auto!important;
 }
 
+.font-header { font-family: 'Libre Baskerville', serif; }
+body { font-family: 'Open Sans', sans-serif; }
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
@@ -28,7 +30,8 @@ h1, h2, h3, h4, h5, h6 {
 .all-caps {
   text-transform: uppercase;
 }
-.text-grey { color: #888; }
+.text-white { color: #FFF; }
+.text-grey { color: #BBB; }
 .bg-white {
   background-color: #FFF;
 }
@@ -38,8 +41,11 @@ h1, h2, h3, h4, h5, h6 {
 .bg-dark-grey {
   background-color: #f3f4f8;
 }
+.bg-header { background-color: #3b3546; }
+.bg-main { background-color: #2d2831; }
+.bg-dark { background-color: #1d1a18; }
 
-.border-top {  border-top: 1px solid #DFDFDF; padding-top: 1.5em;}
+.border-top {  border-top: 4px solid #423b44; padding-top: 1.5em;}
 .round-top {
   border-radius: 0.3em 0.3em 0 0;
 }
@@ -76,7 +82,7 @@ button:disabled {
 }
 
 .box-shadow {
-  box-shadow: 0px 42px 20px #DDD;
+  box-shadow: 0px 42px 20px #211f24;
 }
 
 .App {

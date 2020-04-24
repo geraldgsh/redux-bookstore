@@ -1,5 +1,5 @@
 .app-title {
-  color: #0692FF;
+  color: #dd65f5;
   font-size: 4vmin;
 }
 
@@ -8,8 +8,8 @@
 }
 .book {
   align-items: center;
-  border: 1px solid #DFDFDF; 
-  background-color: #FFF;  
+  border: 1px solid #3b3546; 
+  background-color: #3b3546;  
   border-radius: 0.3em;
   display: flex;
   margin-bottom: 1em;
@@ -33,7 +33,7 @@
   text-align: left;
 }
 #right button {
-  background-color: #0290ff;
+  background-color: #f72d92;
   border: none;
   border-radius: 0.35em;
   color: #FFF;
@@ -42,18 +42,18 @@
 }
 
 .category {
-  color: grey;
-  font-family: Arial;
+  color: #cacaca;
   font-weight: 800;
   margin-bottom: -2px;
 }
 
 .title {
-  margin-bottom: -4px;
+  color: #FFF;
+  margin-bottom: -2px;
 }
 
 .author {
-  color: #3a82b9;
+  color: #ce5e96;
   font-weight: 400;
   margin-bottom: 12px;  
 }
@@ -61,7 +61,7 @@
 .actions button {  
   background-color: transparent;
   border: none;
-  color: #3a82b9;
+  color: #f72d92;
 }
 .actions button:nth-child(1) {
   padding-left: 0;
@@ -74,20 +74,22 @@
 }
 .percent { padding-left: 12px; }
 .percentage {
+  color: #FFF;
   font-weight: 300;
 }
 .completed {
-  color: gray;
+  color: #FFF;
   font-weight: 300;
 }
 
 .current { 
-  color: gray;
+  color: #cacaca;
   font-weight: 400;
   font-size: 12px;
 }
 
 .chapter {
+  color: #FFF;
   margin-bottom: 1em;
 }
 
@@ -97,8 +99,8 @@
   height: 60px;
   border: 10px solid #f3f3f3;
   border-radius: 50%;
-  border-right: 10px solid #2274ee;
-  border-bottom: 10px solid #2274ee;
+  border-right: 10px solid #70518d;
+  border-bottom: 10px solid #70518d;
 }
 
 /* Small screens less than 720px */

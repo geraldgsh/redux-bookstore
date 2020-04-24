@@ -15,7 +15,7 @@ const BookList = ({
   const filteredBooks = (filter !== 'All') ? books.filter(book => book.category === filter) : books;
   return (
     <div>
-      <header className="m-b bg-white round-top">
+      <header className="m-b bg-header round-top">
         <div className="center max-width-90 flex-row">
           <h1 className="app-title">
             Bookstore CMS
@@ -24,6 +24,7 @@ const BookList = ({
             <span className="text-grey">Books</span>
           </div>
           <div className="categories text-center">
+            <span className="text-grey">Genres</span>
             <CategoryFilter changeFilter={changeFilter} />
           </div>
           <img className="react-logo show-sm" src={Logo} alt="react-redux logo" />
@@ -33,7 +34,7 @@ const BookList = ({
           </div>
         </div>
       </header>
-      <main className="bg-grey">
+      <main className="bg-main">
         <div className="center max-width-90 bookSection">
           {filteredBooks.map(book => (
             <Book book={book} key={book.id} removeBook={removeBook} />

@@ -1,8 +1,8 @@
 select {
-  background-color: #FFF;
+  background-color: #fdf7ee;
   border: 1px solid #DDD;
   border-radius: 0.35em;
-  color: #555;
+  color: #333;
   cursor: pointer;
   flex-basis: 20%;
   font-weight: bold;
