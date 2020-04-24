@@ -57,7 +57,7 @@ https://github.com/geraldgsh/redux-bookstore
 
 ## Authors
 
-👤 **Aaron Rory**
+👤 **Gerald Goh**
 - Github: [geraldgsh](https://github.com/geraldgsh)
 - Twitter: [geraldgsh](https://twitter.com/geraldgsh)
 - Linkedin: [Gerald Goh](https://www.linkedin.com/geraldgsh)
