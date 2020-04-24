@@ -11,6 +11,10 @@ In this project you will use React and Redux to build a very simple application.
 
 #### [Original Project Specifications Here](https://github.com/microverseinc/project-redux-bookstore)
 
+### Project Objectives
+
+Magic-books Inc. is a fictional company based in Germany. They have requested your help to build the front-end of an application that will help them organize and manage their bookstore. They want it to be fast, dynamic and responsive to their actions and therefore you decided to build it with React & Redux.
+
 ## Built With
 
 - HTML, CSS
@@ -19,10 +23,6 @@ In this project you will use React and Redux to build a very simple application.
 - [React-Create-App](https://github.com/mars/create-react-app-buildpack)
 - [Redux](https://redux.js.org/)
 - [Prop-types](https://www.npmjs.com/package/prop-types)
-
-### Project Objectives
-
-Magic-books Inc. is a fictional company based in Germany. They have requested your help to build the front-end of an application that will help them organize and manage their bookstore. They want it to be fast, dynamic and responsive to their actions and therefore you decided to build it with React & Redux.
 
 ### To begin
 
