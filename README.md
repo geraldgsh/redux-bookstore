@@ -31,7 +31,7 @@ Magic-books Inc. is a fictional company based in Germany. They have requested yo
 3. `yarn start` or 'npm start' on terminal
 4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## [Live DEMO](https://redux-bkstore.herokuapp.com/)
+## [Live DEMO](https://arn-react-redux-bookstore.netlify.app/)
 
 #### Getting Started
 Clone repo and open index.html with your favorite browser.
