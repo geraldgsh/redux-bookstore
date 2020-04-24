@@ -1,5 +1,6 @@
-.react-logo {
+.logo {
   height: 10vmin;
+  margin-left: auto!important;
   pointer-events: none;
 }
 .logo-container {
@@ -97,22 +98,23 @@ button:disabled {
   .backBG { padding: 0;}
   .container { max-width: none; }
   .hide-sm { display: none; }
+  .show-md { display: none; }
 }
 
 /* Medium devices (landscape tablets, 720px - 1024px) */
 @media only screen and (min-width: 721px) and (max-width: 1023px) {
   .show-sm { display: none; }
+  .hide-md { display: none; }
 }
 
 /* Large devices (laptops/desktops, 1024px and up) */
 @media only screen and (min-width: 1024px) {
   .show-sm { display: none; }
+  .show-md { display: none; }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .react-logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.logo {
+  animation: logo-spin infinite 20s linear;
 }
 
 @keyframes logo-spin {

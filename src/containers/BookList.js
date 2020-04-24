@@ -27,10 +27,11 @@ const BookList = ({
             <span className="text-grey">Genres</span>
             <CategoryFilter changeFilter={changeFilter} />
           </div>
-          <img className="react-logo show-sm" src={Logo} alt="react-redux logo" />
-          <div className="logo-container hide-sm">
-            <img className="react-logo" src={reactLogo} alt="react logo" />
-            <img className="react-logo" src={reduxLogo} alt="redux logo" />
+          <img className="logo show-sm" src={Logo} alt="react-redux logo" />
+          <img className="logo show-md" src={reduxLogo} alt="redux logo" />
+          <div className="logo-container hide-sm hide-md">
+            <img className="logo" src={reactLogo} alt="react logo" />
+            <img className="logo" src={reduxLogo} alt="redux logo" />
           </div>
         </div>
       </header>
