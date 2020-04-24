@@ -13,16 +13,12 @@ In this project you will use React and Redux to build a very simple application.
 
 ## Built With
 
-* Node.js
-* React
-* React-DOM
-* React-Create-App
-* npm
-* CSS
-* ES6
-* Webpack
-* prop-types
-* Redux
+- HTML, CSS
+- [ES6 JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Node Package Manager(NPM)](https://www.npmjs.com/)
+* [React-Create-App](https://github.com/mars/create-react-app-buildpack)
+* [Redux](https://redux.js.org/)
+* [Prop-types](https://www.npmjs.com/package/prop-types)
 
 ### Project Objectives
 
@@ -34,10 +30,6 @@ Magic-books Inc. is a fictional company based in Germany. They have requested yo
 2. 'npm install' to install dependencies
 3. `yarn start` or 'npm start' on terminal
 4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-### Wiki
-
-Checkout our [wikipage](https://github.com/geraldgsh/rexud-bookstore/wiki) for more details. 
 
 ## [Live DEMO](https://redux-bkstore.herokuapp.com/)
 
