@@ -1,5 +1,6 @@
 # Microverse Project Title - Bookstore CMS
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c1257fd4-277f-48f3-86c4-419233724a66/deploy-status)](https://app.netlify.com/sites/arn-react-redux-bookstore/deploys)
+
 [Collaborative Project]
 React
 
