@@ -1,7 +1,9 @@
 .react-logo {
   height: 10vmin;
-  margin-left: auto !important; 
   pointer-events: none;
+}
+.logo-container {
+  margin-left: auto!important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -12,6 +14,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 8em 4em;
 }
 
+.inline-block { display: inline-block;}
 .container {
   max-width: 1400px;
   padding-left: 1em;
@@ -87,16 +90,17 @@ button:disabled {
   .max-width-90 { width: 99%; margin: auto;}
   .backBG { padding: 0;}
   .container { max-width: none; }
+  .hide-sm { display: none; }
 }
 
 /* Medium devices (landscape tablets, 720px - 1024px) */
 @media only screen and (min-width: 721px) and (max-width: 1023px) {
-
+  .show-sm { display: none; }
 }
 
 /* Large devices (laptops/desktops, 1024px and up) */
 @media only screen and (min-width: 1024px) {
-
+  .show-sm { display: none; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
