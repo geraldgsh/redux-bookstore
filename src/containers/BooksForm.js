@@ -12,6 +12,7 @@ class BooksForm extends React.Component {
     this.state = {
       id: Math.floor(Math.random() * 1000),
       title: '',
+      author: '',
       category: categories[0],
     };
     this.handleChange = this.handleChange.bind(this);
@@ -19,15 +20,9 @@ class BooksForm extends React.Component {
   }
 
   handleChange(e) {
-    if (e.target.name === 'title') {
-      this.setState({
-        title: e.target.value,
-      });
-    } else if (e.target.name === 'category') {
-      this.setState({
-        category: e.target.value,
-      });
-    }
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
   }
 
   handleSubmit(e) {
@@ -42,27 +37,37 @@ class BooksForm extends React.Component {
 
   reset() {
     this.setState({
-      id: Math.ceil(Math.random() * 1000),
+      id: Math.floor(Math.random() * 1000),
       title: '',
+      author: '',
       category: categories[0],
     });
   }
 
   render() {
-    const { title, category } = this.state;
+    const { title, author, category } = this.state;
     return (
       <div className="bg-header round-bottom box-shadow">
         <div className="center max-width-90 border-top">
           <div className="formTitle">Add New Book</div>
           <form onSubmit={this.handleSubmit} className="bookForm">
-            <input
-              placeholder="Book Title"
-              name="title"
-              type="text"
-              value={title}
-              onChange={this.handleChange}
-            />
-            <select name="category" placeholder="Category" value={category} onChange={this.handleChange}>
+            <div>
+              <input
+                placeholder="Book Title"
+                name="title"
+                type="text"
+                value={title}
+                onChange={this.handleChange}
+              />
+              <input
+                placeholder="Book Author"
+                name="author"
+                type="text"
+                value={author}
+                onChange={this.handleChange}
+              />
+            </div>
+            <select className="font-header" name="category" placeholder="Category" value={category} onChange={this.handleChange}>
               {categories.map(category => (
                 <option key={category}>{category}</option>
               ))}

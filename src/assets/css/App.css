@@ -1,5 +1,6 @@
 .logo {
-  height: 10vmin;
+  height: 8vmin;
+  max-height: 120px;
   margin-left: auto!important;
   pointer-events: none;
 }

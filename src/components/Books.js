@@ -6,7 +6,7 @@ const Books = ({ book, removeBook }) => (
     <div id="left">
       <h5 className="category font-header">{book.category}</h5>
       <h2 className="title font-header">{book.title}</h2>
-      <h4 className="author">John Doe</h4>
+      <h4 className="author">{book.author}</h4>
       <div className="actions">
         <button type="button" disabled>Comments</button>
         <button type="button" onClick={() => removeBook(book)}>
@@ -34,6 +34,7 @@ Books.propTypes = {
   book: PropTypes.shape({
     id: PropTypes.number,
     title: PropTypes.string,
+    author: PropTypes.string,
     category: PropTypes.string,
   }).isRequired,
   removeBook: PropTypes.func.isRequired,
