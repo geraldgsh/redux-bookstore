@@ -12,9 +12,9 @@ const removeBook = book => ({
   book,
 });
 
-const changeFilter = category => ({
+const changeFilter = genre => ({
   type: CHANGE_FILTER,
-  category,
+  genre,
 });
 
 export {

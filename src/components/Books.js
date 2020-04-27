@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 const Books = ({ book, removeBook }) => (
   <div className="book" key={book.id}>
     <div id="left">
-      <h5 className="category">{book.category}</h5>
-      <h2 className="title">{book.title}</h2>
-      <h4 className="author">John Doe</h4>
+      <h5 className="category font-header">{book.genre}</h5>
+      <h2 className="title font-header">{book.title}</h2>
+      <h4 className="author">{book.author}</h4>
       <div className="actions">
         <button type="button" disabled>Comments</button>
         <button type="button" onClick={() => removeBook(book)}>
@@ -34,7 +34,8 @@ Books.propTypes = {
   book: PropTypes.shape({
     id: PropTypes.number,
     title: PropTypes.string,
-    category: PropTypes.string,
+    author: PropTypes.string,
+    genre: PropTypes.string,
   }).isRequired,
   removeBook: PropTypes.func.isRequired,
 };

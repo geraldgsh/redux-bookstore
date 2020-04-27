@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import './assets/css/index.css';
@@ -8,36 +9,24 @@ import * as serviceWorker from './serviceWorker';
 import rootReducer from './reducers/index';
 import App from './App';
 
-const initialState = {
-  books: [
-    {
-      id: Math.floor(Math.random() * 1000),
-      title: 'Angels and Demons',
-      category: 'Action',
-    },
-    {
-      id: Math.floor(Math.random() * 1000),
-      title: 'Angel',
-      category: 'Horror',
-    },
-    {
-      id: Math.floor(Math.random() * 1000),
-      title: 'Buffy The Vampire Slayer',
-      category: 'Sci-Fi',
-    },
-  ],
-};
+const URL = 'https://arn-bookstore-backend.herokuapp.com/';
+async function populateBooks() {
+  const books = await axios.get(`${URL}`)
+    .then(response => response.data)
+    .catch(error => { throw new Error(error); });
 
-const store = createStore(rootReducer, initialState);
+  const initialState = {
+    books,
+  };
 
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root'),
-);
+  const store = createStore(rootReducer, initialState);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+  ReactDOM.render(
+    <Provider store={store}>
+      <App />
+    </Provider>,
+    document.getElementById('root'),
+  );
+}
+
+populateBooks();
