@@ -4,7 +4,6 @@ import axios from 'axios';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import './assets/css/index.css';
-import * as serviceWorker from './serviceWorker';
 
 import rootReducer from './reducers/index';
 import App from './App';

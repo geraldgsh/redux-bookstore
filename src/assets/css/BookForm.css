@@ -1,6 +1,6 @@
 
 .formTitle {  
-  color: #AAA;
+  color: #e0e0e0;
   font-size: 1.4em;
   font-weight: bold;
   margin-bottom: 12px;
@@ -9,20 +9,39 @@
 
 .bookForm {
   display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
   padding-bottom: 6em;
 }
-.bookForm input {
+.bookForm > div {
+  flex-basis: 50%;
+  margin-right: 1em;
+}
+.bookForm input[name="title"] {
+  display: block;
+  width: 90%;
   border: 1px solid #DDD;
   border-radius: 0.35em;
+  background-color: #fdf7ee;
   color: #555;
-  flex-basis: 60%;
   font-size: 18px;
   font-weight: bold;
-  margin-right: 2em;
+  padding: 12px;  
+}
+.bookForm input[name="author"] {
+  display: block;
+  width: 90%;
+  border: 1px solid #DDD;
+  border-radius: 0.35em;
+  background-color: #fdf7ee;
+  color: #555;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 12px;
   padding: 12px;  
 }
 .bookForm select {
-  background-color: #FFF;
+  background-color: #fdf7ee;
   border: 1px solid #DDD;
   border-radius: 0.35em;
   color: #555;
@@ -33,21 +52,23 @@
   padding: 12px;
 }
 .bookForm button {
-  background-color: #0290ff;
+  background-color: #70518d;
   border: none;
   border-radius: 0.35em;
   color: #FFF;
   flex-basis: 20%;
   font-weight: bold;
   font-size: 16px;  
-  padding: 8px 22px;  
+  padding: 14px 22px;  
 }
 
-/* Small screens less than 720px */
-@media screen and (max-width: 720px) {
+/* Small screens less than 840px */
+@media screen and (max-width: 840px) {
   .formTitle { text-align: center; }
   .bookForm { flex-wrap: wrap; justify-content: center; }
-  .bookForm button { flex-basis: 65%; margin-top: 1em; }
-  .bookForm input { margin-right: 0; }
-  .bookForm select { flex-basis: 65%; margin-top: 1em; margin-right: 0; }
+  .bookForm > div { flex-basis: 100%; margin-right: 0; }
+  .bookForm input[name="title"] { margin-right: 0; order: 1; flex-basis: 65%; }
+  .bookForm input[name="author"] { order: 2; flex-basis: 65%; }
+  .bookForm select { flex-basis: 75%; max-width: 260px; margin-top: 1em; margin-right: 0; order: 3; }
+  .bookForm button { flex-basis: 75%; margin-top: 1em; order: 4; }
 }

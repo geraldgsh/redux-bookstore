@@ -5,7 +5,7 @@ import './assets/css/App.css';
 
 const App = () => (
   <div className="App">
-    <div className="backBG bg-dark-grey">
+    <div className="backBG bg-dark">
       <div className="container center">
         <BookList />
         <BooksForm />

@@ -20,15 +20,9 @@ class BooksForm extends React.Component {
   }
 
   handleChange(e) {
-    if (e.target.name === 'title') {
-      this.setState({
-        title: e.target.value,
-      });
-    } else if (e.target.name === 'category') {
-      this.setState({
-        category: e.target.value,
-      });
-    }
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
   }
 
   handleSubmit(e) {
@@ -53,7 +47,7 @@ class BooksForm extends React.Component {
   render() {
     const { title, author, genre } = this.state;
     return (
-      <div className="bg-grey round-bottom box-shadow">
+      <div className="bg-header round-bottom box-shadow">
         <div className="center max-width-90 border-top">
           <div className="formTitle">Add New Book</div>
           <form onSubmit={this.handleSubmit} className="bookForm">

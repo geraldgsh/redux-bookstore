@@ -1,9 +1,15 @@
-.react-logo {
-  height: 10vmin;
-  margin-left: auto !important; 
+.logo {
+  height: 8vmin;
+  max-height: 120px;
+  margin-left: auto!important;
   pointer-events: none;
 }
+.logo-container {
+  margin-left: auto!important;
+}
 
+.font-header { font-family: 'Libre Baskerville', serif; }
+body { font-family: 'Open Sans', sans-serif; }
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
@@ -12,6 +18,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 8em 4em;
 }
 
+.inline-block { display: inline-block;}
 .container {
   max-width: 1400px;
   padding-left: 1em;
@@ -25,7 +32,8 @@ h1, h2, h3, h4, h5, h6 {
 .all-caps {
   text-transform: uppercase;
 }
-.text-grey { color: #888; }
+.text-white { color: #FFF; }
+.text-grey { color: #BBB; }
 .bg-white {
   background-color: #FFF;
 }
@@ -35,8 +43,11 @@ h1, h2, h3, h4, h5, h6 {
 .bg-dark-grey {
   background-color: #f3f4f8;
 }
+.bg-header { background-color: #3b3546; }
+.bg-main { background-color: #2d2831; }
+.bg-dark { background-color: #1d1a18; }
 
-.border-top {  border-top: 1px solid #DFDFDF; padding-top: 1.5em;}
+.border-top {  border-top: 4px solid #423b44; padding-top: 1.5em;}
 .round-top {
   border-radius: 0.3em 0.3em 0 0;
 }
@@ -73,7 +84,7 @@ button:disabled {
 }
 
 .box-shadow {
-  box-shadow: 0px 42px 20px #DDD;
+  box-shadow: 0px 42px 20px #211f24;
 }
 
 .App {
@@ -87,22 +98,24 @@ button:disabled {
   .max-width-90 { width: 99%; margin: auto;}
   .backBG { padding: 0;}
   .container { max-width: none; }
+  .hide-sm { display: none; }
+  .show-md { display: none; }
 }
 
 /* Medium devices (landscape tablets, 720px - 1024px) */
 @media only screen and (min-width: 721px) and (max-width: 1023px) {
-
+  .show-sm { display: none; }
+  .hide-md { display: none; }
 }
 
 /* Large devices (laptops/desktops, 1024px and up) */
 @media only screen and (min-width: 1024px) {
-
+  .show-sm { display: none; }
+  .show-md { display: none; }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .react-logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.logo {
+  animation: logo-spin infinite 20s linear;
 }
 
 @keyframes logo-spin {
