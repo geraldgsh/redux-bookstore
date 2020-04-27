@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Books = ({ book, removeBook }) => (
   <div className="book" key={book.id}>
     <div id="left">
-      <h5 className="category font-header">{book.category}</h5>
+      <h5 className="category font-header">{book.genre}</h5>
       <h2 className="title font-header">{book.title}</h2>
       <h4 className="author">{book.author}</h4>
       <div className="actions">
@@ -35,7 +35,7 @@ Books.propTypes = {
     id: PropTypes.number,
     title: PropTypes.string,
     author: PropTypes.string,
-    category: PropTypes.string,
+    genre: PropTypes.string,
   }).isRequired,
   removeBook: PropTypes.func.isRequired,
 };

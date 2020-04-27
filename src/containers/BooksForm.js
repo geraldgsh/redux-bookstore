@@ -10,10 +10,10 @@ class BooksForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: Math.floor(Math.random() * 1000),
+      // id: Math.floor(Math.random() * 1000),
       title: '',
       author: '',
-      category: categories[0],
+      genre: categories[0],
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -37,15 +37,15 @@ class BooksForm extends React.Component {
 
   reset() {
     this.setState({
-      id: Math.floor(Math.random() * 1000),
+      // id: Math.floor(Math.random() * 1000),
       title: '',
       author: '',
-      category: categories[0],
+      genre: categories[0],
     });
   }
 
   render() {
-    const { title, author, category } = this.state;
+    const { title, author, genre } = this.state;
     return (
       <div className="bg-header round-bottom box-shadow">
         <div className="center max-width-90 border-top">
@@ -67,7 +67,7 @@ class BooksForm extends React.Component {
                 onChange={this.handleChange}
               />
             </div>
-            <select className="font-header" name="category" placeholder="Category" value={category} onChange={this.handleChange}>
+            <select className="font-header" name="genre" placeholder="Genre" value={genre} onChange={this.handleChange}>
               {categories.map(category => (
                 <option key={category}>{category}</option>
               ))}
