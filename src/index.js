@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import './assets/css/index.css';
 
 import rootReducer from './reducers/index';
@@ -18,7 +19,7 @@ async function populateBooks() {
     books,
   };
 
-  const store = createStore(rootReducer, initialState);
+  const store = createStore(rootReducer, initialState, applyMiddleware(thunk));
 
   ReactDOM.render(
     <Provider store={store}>

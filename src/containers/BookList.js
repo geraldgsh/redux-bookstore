@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Books';
-import { removeBook, changeFilter } from '../actions/index';
+import { removeBook, changeFilter, fetchBookList } from '../actions/index';
 import CategoryFilter from '../components/CategoryFilter';
 import '../assets/css/BookList.css';
 import Logo from '../assets/images/reactRedux.svg';
@@ -10,9 +10,14 @@ import reactLogo from '../assets/images/logo.svg';
 import reduxLogo from '../assets/images/redux.svg';
 
 const BookList = ({
-  books, filter, removeBook, changeFilter,
+  books, filter, fetchBookList, removeBook, changeFilter,
 }) => {
-  const filteredBooks = (filter !== 'All') ? books.filter(book => book.category === filter) : books;
+  // console.log(books);
+  useEffect(() => {
+    fetchBookList();
+  }, []);
+  const filteredBooks = (filter !== 'All') ? books.filter(book => book.genre === filter) : books;
+
   return (
     <div>
       <header className="m-b bg-header round-top">
@@ -38,7 +43,7 @@ const BookList = ({
       <main className="bg-main">
         <div className="center max-width-90 bookSection">
           {filteredBooks.map(book => (
-            <Book book={book} key={book.id} removeBook={removeBook} />
+            <Book book={book} key={book.id + book.title} removeBook={removeBook} />
           ))}
         </div>
       </main>
@@ -53,6 +58,7 @@ BookList.defaultProps = {
 BookList.propTypes = {
   books: PropTypes.instanceOf(Array).isRequired,
   filter: PropTypes.string,
+  fetchBookList: PropTypes.func.isRequired,
   removeBook: PropTypes.func.isRequired,
   changeFilter: PropTypes.func.isRequired,
 };
@@ -63,6 +69,9 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+  fetchBookList: () => {
+    dispatch(fetchBookList());
+  },
   removeBook: book => {
     dispatch(removeBook(book));
   },

@@ -1,17 +1,18 @@
-import { CREATE_BOOK, REMOVE_BOOK } from '../actions/index';
-
-//     // axios.post(`${URL}api/v1/books`, {
-//     //   title: action.book.title,
-//     //   author: action.book.author,
-//     //   genre: action.book.genre,
-//     // })
-//     //   .then(response => {
-//     //     console.log(response);
-//     //   })
-//     //   .catch(error => console.log(error));
+import { CREATE_BOOK, REMOVE_BOOK,
+  FETCH_BOOKLIST_REQUEST, FETCH_BOOKLIST_SUCCESS, FETCH_BOOKLIST_FAILURE,
+} from '../actions/index';
 
 const bookReducer = (state = [], action) => {
   switch (action.type) {
+    case FETCH_BOOKLIST_REQUEST:
+      return [...state];
+
+    case FETCH_BOOKLIST_SUCCESS:
+      return [...action.response];
+
+    case FETCH_BOOKLIST_FAILURE:
+      return [...state];
+
     case CREATE_BOOK:
       return [...state, action.book];
     case REMOVE_BOOK:

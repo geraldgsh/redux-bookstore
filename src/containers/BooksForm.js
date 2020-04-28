@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { createBook } from '../actions/index';
+import { addBookToList } from '../actions/index';
 import '../assets/css/BookForm.css';
 import { categories } from '../constants/categories';
 
@@ -27,10 +27,10 @@ class BooksForm extends React.Component {
 
   handleSubmit(e) {
     const { title } = this.state;
-    const { createBook } = this.props;
+    const { addBookToList } = this.props;
     e.preventDefault();
     if (title) {
-      createBook(this.state);
+      addBookToList(this.state);
       this.reset();
     }
   }
@@ -81,12 +81,12 @@ class BooksForm extends React.Component {
 }
 
 BooksForm.propTypes = {
-  createBook: PropTypes.func.isRequired,
+  addBookToList: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = dispatch => ({
-  createBook: book => {
-    dispatch(createBook(book));
+  addBookToList: book => {
+    dispatch(addBookToList(book));
   },
 });
 
