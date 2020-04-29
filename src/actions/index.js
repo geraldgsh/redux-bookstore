@@ -10,25 +10,6 @@ const CREATE_BOOK = 'CREATE_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 const CHANGE_FILTER = 'CHANGE_FILTER';
 
-
-// async function fetchBookList() {
-//   const books = await axios.get(`${URL}`)
-//     .then(response => response.data)
-//     .catch(error => { throw new Error(error); });
-//   if (!books) { return null; }
-//   return books;
-// }
-
-// async function addBook(action) {
-//   axios.post(`${URL}api/v1/books`, {
-//     title: action.book.title,
-//     author: action.book.author,
-//     genre: action.book.genre,
-//   })
-//     .then(response => console.log(response))
-//     .catch(error => { throw new Error(error); });
-// }
-
 const fetchRequest = () => ({
   type: FETCH_REQUEST,
 });
@@ -66,11 +47,11 @@ const fetchBookList = () => dispatch => {
   dispatch(fetchRequest());
   axios.get(`${URL}`)
     .then(response => {
-      dispatch(fetchRequestSuccess(response.data.message));
+      dispatch(fetchRequestSuccess(response.statusText));
       dispatch(fetchBookListSuccess(response.data));
     })
     .catch(error => {
-      dispatch(fetchRequestFailure(error.response.error));
+      dispatch(fetchRequestFailure(error.response.data.error));
     });
 };
 
@@ -87,8 +68,7 @@ const addBookToList = book => dispatch => {
       dispatch(createBook(newBook.data));
     })
     .catch(error => {
-      dispatch(fetchRequestFailure(error.response.error));
-      console.log(error.response.error.join(''));
+      dispatch(fetchRequestFailure(error.response.data.error));
     });
 };
 
@@ -100,8 +80,7 @@ const removeBookFromList = book => dispatch => {
       dispatch(removeBook(book));
     })
     .catch(error => {
-      dispatch(fetchRequestFailure(error.response.error));
-      console.log(error.response);
+      dispatch(fetchRequestFailure(error.response.data.error));
     });
 };
 

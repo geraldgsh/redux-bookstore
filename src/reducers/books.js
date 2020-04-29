@@ -1,5 +1,4 @@
-import { CREATE_BOOK, REMOVE_BOOK, FETCH_BOOKLIST,
-} from '../actions/index';
+import { CREATE_BOOK, REMOVE_BOOK, FETCH_BOOKLIST } from '../actions/index';
 
 const bookReducer = (state = [], action) => {
   switch (action.type) {

@@ -12,10 +12,9 @@ import reduxLogo from '../assets/images/redux.svg';
 const BookList = ({
   books, filter, fetchBookList, removeBookFromList, changeFilter,
 }) => {
-  // console.log(books);
-  useEffect(() => {
-    fetchBookList();
-  }, []);
+  // useEffect(() => {
+  //   fetchBookList();
+  // }, []);
   const filteredBooks = (filter !== 'All') ? books.filter(book => book.genre === filter) : books;
 
   return (
@@ -58,6 +57,7 @@ BookList.defaultProps = {
 BookList.propTypes = {
   books: PropTypes.instanceOf(Array).isRequired,
   filter: PropTypes.string,
+  status: PropTypes.instanceOf(Object).isRequired,
   fetchBookList: PropTypes.func.isRequired,
   removeBookFromList: PropTypes.func.isRequired,
   changeFilter: PropTypes.func.isRequired,
@@ -66,6 +66,7 @@ BookList.propTypes = {
 const mapStateToProps = state => ({
   books: state.books,
   filter: state.filter,
+  status: state.status,
 });
 
 const mapDispatchToProps = dispatch => ({
