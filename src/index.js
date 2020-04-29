@@ -17,6 +17,7 @@ async function populateBooks() {
 
   const initialState = {
     books,
+    status: { isLoading: false, errors: '' },
   };
 
   const store = createStore(rootReducer, initialState, applyMiddleware(thunk));

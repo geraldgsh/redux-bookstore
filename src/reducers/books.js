@@ -1,18 +1,10 @@
-import { CREATE_BOOK, REMOVE_BOOK,
-  FETCH_BOOKLIST_REQUEST, FETCH_BOOKLIST_SUCCESS, FETCH_BOOKLIST_FAILURE,
+import { CREATE_BOOK, REMOVE_BOOK, FETCH_BOOKLIST,
 } from '../actions/index';
 
 const bookReducer = (state = [], action) => {
   switch (action.type) {
-    case FETCH_BOOKLIST_REQUEST:
-      return [...state];
-
-    case FETCH_BOOKLIST_SUCCESS:
+    case FETCH_BOOKLIST:
       return [...action.response];
-
-    case FETCH_BOOKLIST_FAILURE:
-      return [...state];
-
     case CREATE_BOOK:
       return [...state, action.book];
     case REMOVE_BOOK:

@@ -2,12 +2,10 @@ import axios from 'axios';
 
 const URL = 'https://arn-bookstore-backend.herokuapp.com/';
 
-const FETCH_BOOKLIST_REQUEST = 'FETCH_BOOKLIST_REQUEST';
-const FETCH_BOOKLIST_SUCCESS = 'FETCH_BOOKLIST_SUCCESS';
-const FETCH_BOOKLIST_FAILURE = 'FETCH_BOOKLIST_FAILURE';
-const CREATE_BOOK_REQUEST = 'CREATE_BOOK_REQUEST';
-const CREATE_BOOK_SUCCESS = 'CREATE_BOOK_SUCCESS';
-const CREATE_BOOK_FAILURE = 'CREATE_BOOK_FAILURE';
+const FETCH_REQUEST = 'FETCH_REQUEST';
+const FETCH_REQUEST_SUCCESS = 'FETCH_REQUEST_SUCCESS';
+const FETCH_REQUEST_FAILURE = 'FETCH_REQUEST_FAILURE';
+const FETCH_BOOKLIST = 'FETCH_BOOKLIST';
 const CREATE_BOOK = 'CREATE_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 const CHANGE_FILTER = 'CHANGE_FILTER';
@@ -31,18 +29,22 @@ const CHANGE_FILTER = 'CHANGE_FILTER';
 //     .catch(error => { throw new Error(error); });
 // }
 
-const fetchBookListRequest = () => ({
-  type: FETCH_BOOKLIST_REQUEST,
+const fetchRequest = () => ({
+  type: FETCH_REQUEST,
+});
+
+const fetchRequestSuccess = response => ({
+  type: FETCH_REQUEST_SUCCESS,
+  response,
+});
+const fetchRequestFailure = response => ({
+  type: FETCH_REQUEST_FAILURE,
+  response,
 });
 
 const fetchBookListSuccess = books => ({
-  type: FETCH_BOOKLIST_SUCCESS,
+  type: FETCH_BOOKLIST,
   response: books,
-});
-
-const fetchBookListFailure = error => ({
-  type: FETCH_BOOKLIST_FAILURE,
-  response: error,
 });
 
 const createBook = book => ({
@@ -61,14 +63,19 @@ const changeFilter = genre => ({
 });
 
 const fetchBookList = () => dispatch => {
-  dispatch(fetchBookListRequest());
+  dispatch(fetchRequest());
   axios.get(`${URL}`)
-    .then(response => dispatch(fetchBookListSuccess(response.data)))
-    .catch(error => dispatch(fetchBookListFailure(error.message)));
+    .then(response => {
+      dispatch(fetchRequestSuccess(response.data.message));
+      dispatch(fetchBookListSuccess(response.data));
+    })
+    .catch(error => {
+      dispatch(fetchRequestFailure(error.response.error));
+    });
 };
 
 const addBookToList = book => dispatch => {
-  console.log(book);
+  dispatch(fetchRequest());
   axios.post(`${URL}api/v1/books`, {
     title: book.title,
     author: book.author,
@@ -76,14 +83,31 @@ const addBookToList = book => dispatch => {
   })
     .then(response => {
       const newBook = response.data;
-      return dispatch(createBook(newBook.data));
+      dispatch(fetchRequestSuccess(response.data.message));
+      dispatch(createBook(newBook.data));
     })
-    .catch(error => { throw new Error(error); });
+    .catch(error => {
+      dispatch(fetchRequestFailure(error.response.error));
+      console.log(error.response.error.join(''));
+    });
+};
+
+const removeBookFromList = book => dispatch => {
+  dispatch(fetchRequest());
+  axios.delete(`${URL}api/v1/books/${book.id}`)
+    .then(response => {
+      dispatch(fetchRequestSuccess(response.data.message));
+      dispatch(removeBook(book));
+    })
+    .catch(error => {
+      dispatch(fetchRequestFailure(error.response.error));
+      console.log(error.response);
+    });
 };
 
 export {
-  CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER,
-  FETCH_BOOKLIST_REQUEST, FETCH_BOOKLIST_SUCCESS, FETCH_BOOKLIST_FAILURE,
-  createBook, removeBook, changeFilter, addBookToList,
-  fetchBookListRequest, fetchBookListSuccess, fetchBookListFailure, fetchBookList,
+  CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER, FETCH_BOOKLIST,
+  FETCH_REQUEST, FETCH_REQUEST_SUCCESS, FETCH_REQUEST_FAILURE,
+  changeFilter, addBookToList, removeBookFromList,
+  fetchBookList,
 };

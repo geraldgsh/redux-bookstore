@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Books = ({ book, removeBook }) => (
+const Books = ({ book, removeBookFromList }) => (
   <div className="book" key={book.id}>
     <div id="left">
       <h5 className="category font-header">{book.genre}</h5>
@@ -9,7 +9,7 @@ const Books = ({ book, removeBook }) => (
       <h4 className="author">{book.author}</h4>
       <div className="actions">
         <button type="button" disabled>Comments</button>
-        <button type="button" onClick={() => removeBook(book)}>
+        <button type="button" onClick={() => removeBookFromList(book)}>
           Remove Book
         </button>
         <button type="button" disabled>Edit</button>
@@ -37,7 +37,7 @@ Books.propTypes = {
     author: PropTypes.string,
     genre: PropTypes.string,
   }).isRequired,
-  removeBook: PropTypes.func.isRequired,
+  removeBookFromList: PropTypes.func.isRequired,
 };
 
 export default Books;
