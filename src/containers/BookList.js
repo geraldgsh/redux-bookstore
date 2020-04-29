@@ -10,13 +10,28 @@ import reactLogo from '../assets/images/logo.svg';
 import reduxLogo from '../assets/images/redux.svg';
 
 const BookList = ({
-  books, filter, fetchBookList, removeBookFromList, changeFilter,
+  books, filter, status, fetchBookList, removeBookFromList, changeFilter,
 }) => {
   // useEffect(() => {
   //   fetchBookList();
   // }, []);
   const filteredBooks = (filter !== 'All') ? books.filter(book => book.genre === filter) : books;
 
+  const { isLoading } = status;
+  const renderMain = isLoading
+    ? (
+      <div className="text-center">
+        <div className="loader" />
+        <h1 className="text-white">Loading...</h1>
+      </div>
+    )
+    : (
+      <div className="center max-width-90 bookSection">
+        {filteredBooks.map(book => (
+          <Book book={book} key={book.id + book.title} removeBookFromList={removeBookFromList} />
+        ))}
+      </div>
+    );
   return (
     <div>
       <header className="m-b bg-header round-top">
@@ -40,11 +55,7 @@ const BookList = ({
         </div>
       </header>
       <main className="bg-main">
-        <div className="center max-width-90 bookSection">
-          {filteredBooks.map(book => (
-            <Book book={book} key={book.id + book.title} removeBookFromList={removeBookFromList} />
-          ))}
-        </div>
+        {renderMain}
       </main>
     </div>
   );
