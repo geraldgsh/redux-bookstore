@@ -91,6 +91,15 @@ button:disabled {
   overflow: hidden;
 }
 
+.loader {
+  width: 180px;
+  height: 180px;
+  border: 18px solid #f3f3f3;
+  border-radius: 50%;
+  border-right: 18px solid #70518d;
+  animation: logo-spin infinite 20s linear;
+}
+
 /* Small screens less than 720px */
 @media screen and (max-width: 720px) {
   .flex-row * { margin: 5px 0; }

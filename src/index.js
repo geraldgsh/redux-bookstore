@@ -11,7 +11,7 @@ import { fetchBookList } from './actions';
 
 const initialState = {
   books: [],
-  status: { isLoading: false, errors: '' },
+  status: { isLoading: false, errors: [] },
 };
 
 const store = createStore(rootReducer, initialState, applyMiddleware(thunk));

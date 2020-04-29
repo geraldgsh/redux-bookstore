@@ -21,7 +21,7 @@ const BookList = ({
   const renderMain = isLoading
     ? (
       <div className="text-center">
-        <div className="loader" />
+        <div className="loader center" />
         <h1 className="text-white">Loading...</h1>
       </div>
     )
