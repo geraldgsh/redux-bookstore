@@ -29,6 +29,7 @@ const initialState = {
 };
 
 const store = createStore(rootReducer, initialState);
+window.store = store;
 
 ReactDOM.render(
   <Provider store={store}>
